@@ -75,7 +75,8 @@ class _AddblogState extends State<Addblog> {
         drawer: Drawer(
           child: ListView(
             children: const [
-              UserAccountsDrawerHeader(accountName: const Text("Sangam Magar"), 
+              UserAccountsDrawerHeader(
+                accountName: const Text("Sangam Magar"), 
               accountEmail: const Text("Sangamtmagar46@gmail.com"),
              currentAccountPicture: CircleAvatar(
               backgroundColor: Colors.pink,

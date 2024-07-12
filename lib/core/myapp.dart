@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:music2/page/addblog.dart';
 import 'package:music2/page/hello.dart';
 import 'package:music2/page/listblog.dart';
+import 'package:music2/page/login.dart';
+import 'package:music2/page/mySplash.dart';
+import 'package:music2/page/register.dart';
 import 'package:music2/page/splash.dart';
 
 class MyApp extends StatefulWidget {
@@ -16,12 +19,15 @@ class _MyAppState extends State<MyApp> {
 
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/Hellome",
+      debugShowCheckedModeBanner: false,
+      initialRoute: "/",
       routes: {
-        "/": (context) => const HomePage(),
+        "/":(context) => const Register(),
         "/Addblog": (context) => const Addblog(),
+        "/login": (context) => const LoginPage(),
         "/Grid": (context) => const Listblog(),
         "/Hellome":(context) =>  HelloMe(),
+
       },
     );
   }

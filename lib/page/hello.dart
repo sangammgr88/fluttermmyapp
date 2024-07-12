@@ -56,8 +56,8 @@ class _HelloMeState extends State<HelloMe> {
                   text: 'Home',
                 ),
                 GButton(
-                  icon: Icons.hail,
-                  text: 'Likes',
+                  icon: Icons.list,
+                  text: 'Listblock',
                 ),
                 GButton(
                   icon: Icons.search,
