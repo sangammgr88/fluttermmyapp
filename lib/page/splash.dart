@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:firebase_auth/firebase_auth.dart";
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -8,6 +9,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePage extends State<HomePage> {
+  FirebaseAuth auth = FirebaseAuth.instance;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,16 +23,17 @@ class _HomePage extends State<HomePage> {
             child: Text(
               "Mero Blog",
               style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
-                fontFamily: "sangam",
-              ),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                  fontFamily: "dawa"),
             ),
           ),
-          TextButton(
+          ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, "/Addblog");
+                auth
+                    .signOut()
+                    .then((value) => Navigator.pushNamed(context, "/login"));
               },
               child: const Text("Go to add New Blog"))
         ],
